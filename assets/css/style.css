@@ -353,29 +353,29 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: -280px bottom, center, center;
   background-size: auto, cover, auto;
-  padding-block-start: 120px;
+  padding-block-start: 0px;
   padding-block-end: var(--section-padding);
 }
 
-.hero-content { margin-block-end: 50px; }
+.hero-content { margin-block-end: 40px; }
 
 .hero-subtitle {
   color: var(--chrome-yellow);
   font-family: var(--ff-source-sans-pro);
   font-size: var(--fs-7);
-  margin-block-end: 15px;
+  margin-block-end: 10px;
 }
 
 .hero-title {
   color: var(--white);
   font-size: var(--fs-1);
-  margin-block-end: 20px;
+  margin-block-end: 10px;
 }
 
 .hero-text {
   color: var(--white);
   font-size: var(--fs-8);
-  margin-block-end: 30px;
+  margin-block-end: 15px;
 }
 
 
@@ -755,7 +755,7 @@ body {
   .header .btn {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0px;
     margin-inline-start: auto;
   }
 
