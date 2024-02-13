@@ -1,28 +1,17 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
+ 
 
   /**
    * colors
+     --rajah: hsl(29, 99%, 67%);
+     --razzmatazz: hsl(335, 87%, 51%);
+     --royal-blue-dark: hsl(231, 68%, 21%)
    */
 
   --st-patricks-blue: hsl(236, 57%, 28%);
   --amaranth-purple: hsl(335, 88%, 38%);
-  --royal-blue-dark: hsl(231, 68%, 21%);
+  --royal-blue-dark: #16115b;
   --chrome-yellow: hsl(39, 100%, 52%);
   --space-cadet-1: hsl(230, 41%, 25%);
   --space-cadet-2: hsl(230, 59%, 16%);
@@ -30,14 +19,14 @@
   --purple-navy: hsl(236, 26%, 43%);
   --ksu-purple: hsl(275, 54%, 33%);
   --winter-sky: hsl(335, 87%, 53%);
-  --razzmatazz: hsl(335, 87%, 51%);
+  --razzmatazz: hsl(39, 100%, 52%);
   --platinum: hsl(0, 0%, 90%);
   --black_70: hsla(0, 0%, 0%, 0.7);
-  --rajah: hsl(29, 99%, 67%);
+  --rajah: #0f12c4;
   --white: hsl(0, 0%, 100%);
 
   --gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
-  --gradient-2: linear-gradient(90deg,var(--razzmatazz) ,var(--rajah));
+  --gradient-2: linear-gradient(20deg   ,var(--rajah),var(--razzmatazz) ,var(--rajah));
 
   /**
    * typography
@@ -90,6 +79,25 @@
 }
 
 
+/* Media query for screens 800 pixels or larger */
+.casestudy {
+  display: flex;
+  padding-top: 44px;
+  padding-bottom: 14px;
+  max-width: 100%;
+  /* Show the div on larger screens */
+}
+
+.image-section{
+  max-width: 100%;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -166,7 +174,66 @@ body {
 .h2,
 .h3 { font-family: var(--ff-source-sans-pro); }
 
+
+
+@media only screen and (max-width: 799px) {
+  .text-section {
+    justify-content: center;
+    font-size: 6vw;
+      
+}}
+
+@media only screen and (min-width: 800px){
+.text-section {
+  font-size: 1.8vw;
+  
+} }
+
+
+@media only screen and (max-width: 799px) {
+  .image-section {
+   display: none;
+      
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adjust button size for smaller screens */
+@media only screen and (max-width: 799px) {
+  .btn {
+      width: 74vw;
+      height: 15vh;
+      transition: all 0.3s ease;
+      background-image: var(--gradient-2);
+      background-size: 200%;
+      color: var(--white);
+      padding: 12px 35px;
+      font-size: var(--fs-8);
+      font-weight: var(--fw-500);
+      border-radius: 0 25px;
+      transition: var(--transition-2);
+  }
+}
+
+@media only screen and (min-width: 800px){
 .btn {
+  width: 23vw;
+  height: 10vh;
+  transition: all 0.3s ease;
   background-image: var(--gradient-2);
   background-size: 200%;
   color: var(--white);
@@ -175,7 +242,9 @@ body {
   font-weight: var(--fw-500);
   border-radius: 0 25px;
   transition: var(--transition-2);
-}
+} }
+
+
 
 .btn:is(:hover, :focus) { background-position: right; }
 
@@ -340,6 +409,33 @@ body {
 
 
 
+@media only screen and (max-width: 799px) {
+  .hero {
+    background-image: url("../images/hero-bg-bottom.png"),
+                      url("../images/hero-bg.png"),
+                      var(--gradient-1);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: -280px bottom, center, center;
+    background-size: auto, cover, auto;
+    padding-block-start: 0px;
+    padding-block-end: var(--section-padding);
+    
+  }
+}
+
+@media only screen and (min-width: 800px){
+  .hero {
+    background-image: url("../images/hero-bg-bottom.png"),
+                      url("../images/hero-bg.png"),
+                      var(--gradient-1);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: -280px bottom, center, center;
+    background-size: auto, cover, auto;
+    padding-block-start: 0px;
+    padding-block-end: var(--section-padding);
+   
+  } }
+
 
 
 /*-----------------------------------*\
@@ -365,6 +461,28 @@ body {
   font-size: var(--fs-7);
   margin-block-end: 10px;
 }
+
+
+@media only screen and (max-width: 799px) {
+  .hero-subtitle1 {
+    color: var(--chrome-yellow);
+    font-family: var(--ff-source-sans-pro);
+    font-size: var(--fs-7);
+    margin-block-end: 10px;
+    margin-top: 140px;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  .hero-subtitle1 {
+    color: var(--chrome-yellow);
+    font-family: var(--ff-source-sans-pro);
+    font-size: var(--fs-7);
+    margin-block-end: 10px;
+  }}
+
+
+
 
 .hero-title {
   color: var(--white);
