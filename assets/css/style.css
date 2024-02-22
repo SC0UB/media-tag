@@ -41,10 +41,10 @@
   --purple-navy: hsl(236, 26%, 43%);
   --ksu-purple: #140217;
   --winter-sky: hsl(335, 87%, 53%);
-  --razzmatazz: hsl(272, 100%, 52%);
+  --razzmatazz: #cc00ff;
   --platinum: hsl(0, 0%, 90%);
   --black_70: hsla(285, 13%, 6%, 0.7);
-  --rajah: #9000ff;
+  --rajah: #cc00ff;
   --white: hsl(0, 0%, 100%);
 
   --gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
@@ -198,18 +198,16 @@ body {
 
 
 
-@media only screen and (max-width: 799px) {
+
   .text-section {
     justify-content: center;
-    font-size: 6vw;
+    font-size: 1.5em;
       
-}}
+}
 
-@media only screen and (min-width: 800px){
-.text-section {
-  font-size: 1.8vw;
-  
-} }
+
+
+
 
 
 @media only screen and (max-width: 799px) {
