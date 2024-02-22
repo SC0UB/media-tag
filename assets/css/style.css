@@ -9,7 +9,8 @@
      --royal-blue-dark: hsl(231, 68%, 21%)
    */
 
-  --st-patricks-blue: hsl(236, 57%, 28%);
+    /**
+   *   --st-patricks-blue: hsl(236, 57%, 28%);
   --amaranth-purple: hsl(335, 88%, 38%);
   --royal-blue-dark: #16115b;
   --chrome-yellow: hsl(39, 100%, 52%);
@@ -23,6 +24,27 @@
   --platinum: hsl(0, 0%, 90%);
   --black_70: hsla(0, 0%, 0%, 0.7);
   --rajah: #0f12c4;
+  --white: hsl(0, 0%, 100%);
+
+  --gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
+  --gradient-2: linear-gradient(20deg   ,var(--rajah),var(--razzmatazz) ,var(--rajah));
+   */
+
+
+  --st-patricks-blue: hsl(236, 57%, 28%);
+  --amaranth-purple: hsl(335, 88%, 38%);
+  --royal-blue-dark: #1a0821;
+  --chrome-yellow: hsl(39, 100%, 52%);
+  --space-cadet-1: hsl(230, 41%, 25%);
+  --space-cadet-2: hsl(230, 59%, 16%);
+  --winter-sky_50: hsla(335, 87%, 53%, 0.5);
+  --purple-navy: hsl(236, 26%, 43%);
+  --ksu-purple: #140217;
+  --winter-sky: hsl(335, 87%, 53%);
+  --razzmatazz: hsl(272, 100%, 52%);
+  --platinum: hsl(0, 0%, 90%);
+  --black_70: hsla(285, 13%, 6%, 0.7);
+  --rajah: #9000ff;
   --white: hsl(0, 0%, 100%);
 
   --gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
@@ -213,40 +235,34 @@ body {
 
 
 /* Adjust button size for smaller screens */
-@media only screen and (max-width: 799px) {
-  .btn {
-      width: 74vw;
-      height: 15vh;
-      transition: all 0.3s ease;
-      background-image: var(--gradient-2);
-      background-size: 200%;
-      color: var(--white);
-      padding: 12px 35px;
-      font-size: var(--fs-8);
-      font-weight: var(--fw-500);
-      border-radius: 0 25px;
-      transition: var(--transition-2);
-  }
-}
-
-@media only screen and (min-width: 800px){
 .btn {
-  width: 23vw;
-  height: 10vh;
-  transition: all 0.3s ease;
-  background-image: var(--gradient-2);
-  background-size: 200%;
+  width: 21em;
+  height: 5em;
+  border: none;
+  outline: none;
   color: var(--white);
-  padding: 12px 35px;
   font-size: var(--fs-8);
   font-weight: var(--fw-500);
+  background-image: var(--gradient-2);
+  background-size: 200%;
+  padding: 12px 35px;
   border-radius: 0 25px;
-  transition: var(--transition-2);
-} }
+  transition: all 0.3s ease, var(--transition-2);
+  cursor: pointer;
+}
 
+.btn:hover {
+  animation: glow 200000s infinite;
+}
 
-
-.btn:is(:hover, :focus) { background-position: right; }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(132, 0, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 50px rgb(128, 0, 255);
+  }
+}
 
 .w-100 { width: 100%; }
 
